@@ -61,7 +61,7 @@ const UploadTable: React.FC<UploadTableProps> = ({files, setFiles}) => {
               No Images
             </p>
             <p className="text-lg text-center text-slate-800/50">
-              Drag your images here <br/> or click to upload
+              Drag your images here (JPGs only) <br/> or click to upload
             </p>
           </div>
           <div className="flex h-fit items-center justify-center gap-2">

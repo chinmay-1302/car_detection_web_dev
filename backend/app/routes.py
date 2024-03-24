@@ -16,13 +16,26 @@ def predict(image):
     obj_dict = {}
     img = np.array(image)
     results = model.predict(source=img, classes = classes, conf=conf_thres)
+    
     names = model.names
+    bicycle_id = list(names)[list(names.values()).index('bicycle')]
     car_id = list(names)[list(names.values()).index('car')]
+    motorcycle_id = list(names)[list(names.values()).index('motorcycle')]
+    bus_id = list(names)[list(names.values()).index('bus')]
+    
     truck_id = list(names)[list(names.values()).index('truck')]
+    bicycle_no = results[0].boxes.cls.tolist().count(bicycle_id)
     car_no = results[0].boxes.cls.tolist().count(car_id)
+    motorcycle_no = results[0].boxes.cls.tolist().count(motorcycle_id)
+    bus_no = results[0].boxes.cls.tolist().count(bus_id)
     truck_no = results[0].boxes.cls.tolist().count(truck_id)
+    
+    obj_dict['bicycles'] = bicycle_no
     obj_dict['cars'] = car_no
+    obj_dict['motorcycles'] = motorcycle_no
+    obj_dict['buses'] = bus_no
     obj_dict['trucks'] = truck_no
+    
     for r in results:
         annotator = Annotator(img)
         boxes = r.boxes

@@ -25,6 +25,10 @@ const HomePage = () => {
       });
       console.log(res.data);
       // navigator('/results');
+      navigator(
+        "/results", 
+        { state: { org_data: files , pred_data: res.data } }
+      );
     } catch (error) {
       console.error(error);
     }
@@ -38,7 +42,7 @@ const HomePage = () => {
 
   return (
     <>
-      <Navbar upload={handleApiRequest} />
+      <Navbar upload={handleApiRequest} state="viewResults" />
       <div className="flex-1 w-full flex flex-col items-center justify-center bg-white overflow-x-hidden">
         <UploadTable files={files} setFiles={setFiles} />
       </div>
