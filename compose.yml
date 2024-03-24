@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  car_detection:
+    image: chinmaymhatre111/car_detection:latest
+    container_name: car_detection
+    ports:
+      - 5173:5173
+      - 3000:3000
