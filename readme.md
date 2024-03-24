@@ -21,15 +21,18 @@ git clone <repo-url>
 ```bash
 cd <repo-name>
 ```
-3. Build the docker image
-```bash
-docker-compose build
 ```
-4. Run the docker container
+3. Run the docker container
 ```bash
 docker-compose up
 ```
-5. Open the browser and go to `http://localhost:3000`
+5. Open the browser and go to `http://localhost:5173`
+
+## Run
+1. Open the browser and go to `http://localhost:3000`
+2. Upload an image. Sample images are provided in the `data` folder.
+3. Click on the `View Processed Images` button.
+4. The processed image will be displayed with the detected objects.
 
 
 ## Tasks
