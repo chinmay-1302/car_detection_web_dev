@@ -1,9 +1,36 @@
 # Screening Test for Project 10 @ CiSTUP Summer Internship 2024
-Name: Chinmay Pravin Mhatre
+![CarDetectionDemo](CarDetectionDemo.gif)
+Name: Chinmay Pravin Mhatre <br/>
 Email: chinmaymhatre111@gmail.com
 
 ## Goal
 Develop a web-based application that enables users to upload transportation-related images (such as traffic camera images) and perform object detection on those images.
+
+## Tech Stack
+- Frontend: React.js
+- Backend: Flask
+- Object Detection: OpenCV and YOLOv8
+- Deployment: Docker
+
+## Setup
+1. Clone the repository
+```bash
+git clone <repo-url>
+```
+2. Change the directory
+```bash
+cd <repo-name>
+```
+3. Build the docker image
+```bash
+docker-compose build
+```
+4. Run the docker container
+```bash
+docker-compose up
+```
+5. Open the browser and go to `http://localhost:3000`
+
 
 ## Tasks
 1. Design and build an attractive user interface (UI) for the web application using HTML, CSS, and JavaScript. The UI should feature a navigation bar, a form for uploading images, and a section to display both the original and processed images.
